@@ -1,0 +1,62 @@
+/*.navbar {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.navbar-inverse {
+	background: #404040;
+	border-color: #2d2d2d;
+}
+.navbar-inverse .navbar-nav > .active>a {
+	background-color: #ff421b;
+}
+.navbar-inverse .navbar-brand {
+	font-family: 'Abel', sans-serif;
+	font-weight: bold;
+	font-size: 38px;
+	/*color: #999;*/
+	/*letter-spacing: 1px;*/
+/*}*/
+     body  {
+	            background-image: url(images/low_contrast_linen_@2X.png); 
+	            background-size: cover;
+	            }
+
+.navbar-inverse {
+    background-color:  rgb(92, 138, 138);
+}
+.navbar .dropdown-menu{
+	border-radius: 10px;
+}
+.navbar-header li a{
+	color: black;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: rgb(163, 194, 194);
+    border-radius: 10px;
+}
+.nav.navbar-nav li a {
+	color: #bfbfbf;
+ }
+
+
+.navbar li:hover {
+    background-color: rgb(163, 194, 194);
+    border-radius: 10px;
+}
+
+
+#last_news_image {
+    width: 180px;
+    float: left;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+	font-family: "Brush Script MT", cursive;
+}
+
+p {
+	 font-size: 18px;
+    font-family: "Cornerstone" , cursive;
+}

@@ -1,5 +1,5 @@
 body {
-    background-image: url("low_contrast_linen_@2X.png");
+    background-image: url("images/low_contrast_linen_@2X.png");
 }
 header {
     margin-right: 136px;
@@ -27,10 +27,8 @@ li a, .drop {
 
 }
 li a:hover, .dropdown:hover .drop {
-    background-color: red;/**/
-
+    background-color: red;
     animation: colorchange 1s normal;
-    -webkit-animation: colorchange 1s normal;
 
 }
 li.dropdown {
@@ -81,7 +79,6 @@ li.dropdown {
     margin-right: 200px;
     letter-spacing: 0.8px;
     float: left;
-    /*background: rgba(255,255,255,0.1);*/
     margin-top: 0px;
 }
 footer {
@@ -93,8 +90,7 @@ footer {
     text-align: center;
 }
 #top_picture {
-    animation-duration: 2s;
-    animation-name: bounceIn;
+    animation: bounceIn 2s;
 }
 #top_logo {
     color: white;
@@ -107,7 +103,6 @@ footer {
     animation: picAppear 2s;
 }
 .last_news_image {
-    weight: 200px;
     height: 200px;
     float: left;
 }
@@ -123,23 +118,17 @@ footer {
         transform: scale(1);
     }
 }
+
 @keyframes picAppear {
-    0% {
+    from {
         transform: scale(0);
         margin-left: 30%;
     }
-}
-50% {
-    transform: scale(0.5);
-    margin-left: 15%;
+    to {
+        transform: scale(1);
+    }
 }
 
-}
-100% {
-    transform: scale(1);
-    margin-left: 0%;
-}
-}
 
 @keyframes colorchange {
        0%   {background-color: #ffffff;}
@@ -148,33 +137,19 @@ footer {
       75%  {background-color: #ff4d4d;}
       100% {background-color: #ff0000;}
   }
-@-webkit-keyframes colorchange 
-    {
-      0%   {background-color: #ffffff;}
-      25%  {background-color: #ffcccc;}
-      50%  {background-color: #ff9999;}
-      75%  {background-color: #ff4d4d;}
-      100% {background-color: #ff0000;}
-    }
 
 
- .responsive_right {
+
+ .block_right {
     padding: 0 150px;
     float: left;
     width: 300px;
-    /*margin-top: 158px;*/
-    display: inline-block;
-    /*border-top: 1px white;*/
-    /*margin-right: 200px;*/
 }
     
-    .responsive {
-    /*padding: 0 6px;*/
+    .block {
     float: left;
     width: 300px;
     margin-left: 22%;
-    display: inline-block;
-    border: 1 px solid #ccc;
 }
 #news_text {
     font-size: 18px;
@@ -182,12 +157,10 @@ footer {
     font-family: "Brush Script MT", cursive;
     letter-spacing: 0.8px;
     display:inline;
-margin-top: 0px;
--webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;    
+    margin-top: 0px;
 }
 
-.news_picture {
+.news {
 
     border: 1px solid #ccc;
 }
