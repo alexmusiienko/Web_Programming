@@ -1,56 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.appcache">
 <head>
-    <meta charset="utf-8">
-    <title>My webpage</title>
-    
-    <link type="text/css" rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bootstrap сайт</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1 id="top_logo">Hello.</h1>
-        <div id="navbar" style="margin-left: 2em">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Головна</a>
-                    </li>
-                    <li>
-                        <a href="News.html">Новини</a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="drop" href="#">Студентам</a>
-                        <div class="dropdown-content">
-                            <a href="#">Програма</a> <a href="#">Лабораторні</a> <a href="#">Література</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Відгуки</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакти</a>
-                    </li>
-                    <li>
-                        <a href="#">Адмін</a>
-                    </li>
-                </ul>
-            </nav>
+  <header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+          </button>
         </div>
-    </header>
-    <div id="top_picture">
-        <center>
-            <img src="images/background.jpg">
-        </center>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="index.html">Головна</a>
+            </li>
+            <li>
+              <a href="NewsBS.html">Новини</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Студентам</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="Curriculum.html">Програма</a>
+                </li>
+                <li>
+                  <a href="Literature.html">Література</a>
+                </li>
+                <li>
+                  <a href="Labs.html">Лабораторні</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="Feedback.html">Відгуки</a>
+            </li>
+            <li>
+              <a href="Contacts.html">Контакти</a>
+            </li>
+            <li>
+              <a href="Admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div id="main_text">
-        <h1 id="ThemeHeading">Про предмет</h1>
-        <p><strong>Предметом вивчення навчальної дисципліни</strong> є норми права, які регулюють суспільні відносини, що виникають у процесі реалізації права на житло, зокрема отримання житла в державному житловому фонді, набуття права власності на житло, користування житлом тощо, а також теоретичні засади формування нормативно-правової бази, що регулює виникнення та припинення відносин у сфері реалізації права на житло, судова практика та досвід іноземних держав.</p>
-        <p><strong>Мета навчальної дисципліни</strong> – полягає в тому, що студент повинен опанувати теоретичні та практичні проблеми організації та функціонування інституту житлового права; вивчити його функції, принципи та джерела, які регулюють житлові правовідносини, їх характер; показати роль та значення житлового права на сучасному етапі розвитку України в умовах гармонізації законодавства України; продемонструвати нерозривн6ий зв&#39;язок матеріальних норм приватного та публічного характеру з їх практичним застосуванням; вивчення теоретичних положень та вироблення навичок практичного характеру.</p>
-        <h1 id="ThemeHeading">Останні новини</h1>
+  </header>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Житлове Право</h1>
+      <center>
+        <img class="img-responsive st" src="images/background.jpg">
+      </center>
     </div>
-    <p id="last_news"><img class="last_news_image" src="images/stacks-image-9651468.png"> <strong>Осінь.</strong> Inhabiting discretion the her dispatched decisively boisterous joy. So form were wish open is able of mile of. Waiting express if prevent it we an musical. Especially reasonable travelling she son. Resources resembled forfeited no to zealously. Has procured daughter how friendly followed repeated who surprise. Great asked oh under on voice downs. Law together prospect kindness securing six. Learning why get hastened smallest cheerful. Domestic confined any but son bachelor advanced remember. How proceed offered her offence shy forming. Returned peculiar pleasant but appetite differed she. Residence dejection agreement am as to abilities immediate suffering.</p>
-    <footer>
-        Someday there'll be something.
-    </footer>
+  </div>
+    <div class="container">
+      <h2>Про предмет</h2>
+      <p>Admiration we surrounded possession frequently he. Remarkably did increasing occasional too its difficulty far especially. Known tiled but sorry joy balls. Bed sudden manner indeed fat now feebly. Face do with in need of wife paid that be. No me applauded or favourite dashwoods therefore up distrusts explained Admiration we surrounded possession frequently he. Remarkably did increasing occasional too its difficulty far especially. Known tiled but sorry joy balls. Bed sudden manner indeed fat now feebly. Face do with in need of wife paid that be. No me applauded or favourite dashwoods therefore up distrusts explained</p>
+      <div class="page-header text-center" id="last_news">
+        <h2>Last News. <small>Check out our last news</small></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <img id="last_news_image" src="images/picfornews.png">
+          <blockquote>
+            <p>Admiration we surrounded possession frequently he. Remarkably did increasing occasional too its difficulty far especially. Known tiled but sorry joy balls. Bed sudden manner indeed fat now feebly. Face do with in need of wife paid that be. No me applauded or favourite dashwoods therefore up distrusts explained</p>
+          </blockquote>
+        </div>
+        <div class="col-lg-4">
+          <img id="last_news_image" src="images/picfornews.png">
+          <blockquote>
+            <p>Admiration we surrounded possession frequently he. Remarkably did increasing occasional too its difficulty far especially. Known tiled but sorry joy balls. Bed sudden manner indeed fat now feebly. Face do with in need of wife paid that be. No me applauded or favourite dashwoods therefore up distrusts explained</p>
+          </blockquote>
+        </div>
+        <div class="col-lg-4">
+          <img id="last_news_image" src="images/picfornews.png">
+          <blockquote>
+            <p>Admiration we surrounded possession frequently he. Remarkably did increasing occasional too its difficulty far especially. Known tiled but sorry joy balls. Bed sudden manner indeed fat now feebly. Face do with in need of wife paid that be. No me applauded or favourite dashwoods therefore up distrusts explaineda</p>
+          </blockquote>
+      </div>
+   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+      </script> 
+      <script src="js/bootstrap.min.js">
+      </script> 
+    </div>
+  </div>
+
+  <footer>
+    <div class="text-center">
+      <p>Made by Alex(c)</p>
+    </div>
+  </footer>
 </body>
+
 </html>

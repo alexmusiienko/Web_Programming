@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bootstrap сайт</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <title>Bootstrap сайт</title>
+</head>
+<body>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <header>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="index.html">Головна</a>
+            </li>
+            <li>
+              <a href="NewsBS.html">Новини</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Студентам</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="Curriculum.html">Програма</a>
+                </li>
+                <li>
+                  <a href="Literature.html">Література</a>
+                </li>
+                <li>
+                  <a href="Labs.html">Лабораторні</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="Feedback.html">Відгуки</a>
+            </li>
+            <li class="active">
+              <a href="Contacts.html">Контакти</a>
+            </li>
+            <li>
+              <a href="Admin.html">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="Contacts_text">
+      <h2 style="margin-top:70px">Наші контакти</h2>
+      <ul>
+        <li>Адреса: Львів</li>
+        <li>Телефон: 234</li>
+        <li>Індекс: 2145</li>
+      </ul>
+    </div>
+    <div id="map"></div>
+    <script>
+       function initMap() {
+            var uluru = {lat: 49.835470, lng: 24.014439};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+    </script> 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU5OqpO0x5XWk1hRfEn5MAzZDQQpO4KJQ&callback=initMap">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script> 
+    <script src="js/bootstrap.min.js">
+    </script> 
+
+  </div>
+
+  <footer>
+    <div class="text-center">
+      <p>Made by Alex(c)</p>
+    </div>
+  </footer>
+
+</body>
+ 

@@ -1,0 +1,19 @@
+CACHE MANIFEST
+
+CACHE:
+
+NewsBS.html
+Feedback.html
+js/bootstrap.js
+js/bootstrap.min.js
+
+images/background.jpg
+images/picfornews.png
+images/manface.png
+
+css/bootstrap.css.map
+css/bootstrap.css
+css/main.css
+
+FALLBACK:
+offline.html
