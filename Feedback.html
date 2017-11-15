@@ -36,7 +36,7 @@
                 </li>
               </ul>
             </li>
-            <li  class="active">
+            <li class="active">
               <a href="Feedback.html">Відгуки</a>
             </li>
             <li>
@@ -50,44 +50,47 @@
       </div>
     </div>
   </header>
+<h1>Відгуки</h1>
 
-  <div class="container">
-    <h1> Відгуки </h1>
-
-    <h2 class="Feedback_heading" > Вася Пупкін <small>21.10.2017</small></h2>
-         <img id="feedback_image" src="images/manface.png">
-    <p> Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young. 
-    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. </p>
-
-        <h2 class="Feedback_heading" > Ізольда Ігорівна <small>21.10.2017</small></h2>
-            <img id="feedback_image" src="images/womanface.png">
-    <p> Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young. 
-    Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. </p>
-
-
-    <div class="container">
-      <div class="row" >
-
+   <div class="container">
+      <div class="row">
         <form>
           <div class="form-group">
-            <textarea class="form-control" rows="5" placeholder="Новий відгук..."></textarea>
+            <textarea class="form-control" id="NameText" placeholder="Введіть ім'я та прізвище..." rows="1"></textarea>
           </div>
-          <button type="button" class="btn btn-primary btn-md">Відправити</button>
+          <div class="form-group">
+            <textarea class="form-control" id="FeedbackText" placeholder="Новий відгук..." rows="5"></textarea>
+          </div><button class="btn btn-primary btn-md" id="sendbtn" onclick="addFeedback()" type="button">Відправити</button>
         </form>
       </div>
     </div>
+
+
+  <div class="container" id="responses">
+
+        <div class="feedback">
+      <h2 class="Feedback_heading">Вася Пупкін</span> <small>21.10.2017</small></h2>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young. Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
+    </div>
+    <div class="feedback">
+      <h2 class="Feedback_heading">Ізольда Ігорівна <small>21.10.2017</small></h2>
+      <p>Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own advantage furniture continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young. Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery.</p>
+    </div>
+ 
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+  </script> 
+  <script src="js/bootstrap.min.js">
+  </script> 
+    <script src="Feedback.js">
+  </script>
+
+</body>
   <footer>
     <div class="text-center">
       <p>Made by Alex(c)</p>
     </div>
   </footer>
-</body>
-        
-    
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
-      </script> 
-      <script src="js/bootstrap.min.js">
-      </script> 
-  
+</html>
