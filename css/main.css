@@ -31,6 +31,18 @@
     width: 180px;
     float: left;
 }
+.Feedback_heading {
+        margin-top: 70px;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: "Brush Script MT", cursive;
+}
+.News_heading {
+    margin-top: 0px;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: "Brush Script MT", cursive;
+}
 
 h2,h1 {
     margin-top: 70px;
@@ -51,43 +63,6 @@ footer{
 }
 
 
- #map {
-        height: 400px;
-        width: 100%;
-       }
-
-.Contacts_text{
- 
-    font-size: 20px;
-    font-family: "Cornerstone" , cursive;
-}
-
-.btn {
-    float: right;
-}
-.Feedback_heading{
-    text-transform: uppercase;
-    text-align: left;
-    font-family: "Brush Script MT", cursive;
-}
-
-#feedback_image {
-    float: left;
-    width: 100px;
-    height: 100px;
-
-}
-.adminbutton {
-    float: left;
-    width: 75%;
-}
-.adm_photo {
-    width: 75%;
-    margin-top: 10%;    
-}
-.admin_button {
-    margin-top: 10%;
-}
 
 
 

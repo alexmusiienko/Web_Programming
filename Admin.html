@@ -54,19 +54,19 @@
   <div class="container">
     <h1>Додати новину</h1>
        <div class="col-lg-6">
-              <button type="button" class="adminbutton btn btn-primary btn-md  ">Додати зображення</button>
-
-            <img src="images/Random-turtle.gif" class="adm_photo img-responsive st">
-       </div>
+              <!-- <button type="button" class="adminbutton btn btn-primary btn-md  ">Додати зображення</button> -->
+        <form id="news-img-form">
+                  <label>Виберіть зображення</label>
+                  <input id="news-img" type="file" class="form-control-file" accept="image/*">
+                </form>
+                    <img id="target" src="images/Random-turtle.gif" class="adm_photo img-responsive st">
+               </div>
 
         <div class="col-lg-6">
           <div class="form-group">
             <textarea class="form-control" id="newsHeader" rows="1" placeholder="Заголовок..."></textarea>
           </div>
-            <div class="form-group">
-            <textarea class="form-control" id="newsShortText" rows="3" placeholder="Короткий опис..."></textarea>
-          </div>
-              <div class="form-group">
+                       <div class="form-group">
             <textarea class="form-control" id="newsText"rows="10" placeholder="Новина..."></textarea>
             <button  class="admin_button btn btn-primary btn-lg" onClick = "addNews()" type="button">Haдіслати</button>
           </div>
