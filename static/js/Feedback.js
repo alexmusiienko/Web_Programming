@@ -1,0 +1,126 @@
+
+var i = 0;
+
+$( document ).ready( function() {
+
+      readOfflineFeedback();
+
+      window.addEventListener( 'online', function( e ) {
+        alert( "Відправляю дані с LS на север" );
+        readOfflineFeedback();
+      } );
+      $( document ).on( "click", "#sendbtn", function() {
+        var text = document.getElementById( "text" ).value;
+        var author = document.getElementById( "name" ).value;
+        if ( author.value == "" ) {
+          alert( "Введіть ім'я!" );
+          return;
+        }
+        if ( text.value == "" ) {
+          alert( "Введіть відгук!" );
+          return;
+        }
+        var date = new Date();
+        var dateString = "";
+        dateString = date.getDate() + "." + ( date.getMonth() + 1 ) + "." + date.getFullYear();
+        var element = document.getElementById( "responses" );
+        var out = document.createElement( "div" );
+        out.id = "feedback";
+        var feedback = {
+          date: dateString,
+          author: author,
+          text: text,
+        };
+        out.innerHTML = '<div class = "feedback" >' + '<h2 class="Feedback_heading">' + feedback.author + " " + '<small>' + feedback.date + '</small> </h2>' + '<p>' + feedback.text + '</p>' + '</div></div>';
+        if ( navigator.onLine ) {
+          element.insertBefore( out, element.firstChild );
+          var obj = JSON.stringify( feedback );
+          fetch( 'http://localhost:3030/feedback', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: obj
+          } );
+        } else {
+          if ( useLocalStorage ) {
+            var text = document.getElementById( "text" ).value;
+            var name = document.getElementById( "name" ).value;
+            var date1 = new Date();
+            var date = "";
+            date = date1.getDate() + "." + ( date1.getMonth() + 1 ) + "." + date1.getFullYear();
+            i++;
+            var list = [];
+            list.push( {
+              "name": name,
+              "text": text,
+              "date": date
+            } );
+            localStorage.setItem( 'feedback' + i, JSON.stringify( list ) );
+            document.getElementById( "text" ).value = '';
+            document.getElementById( "name" ).value = '';
+          } else {
+            var transaction = db.transaction( [ "feedback" ], "readwrite" );
+            var store = transaction.objectStore( "feedback" );
+            var date1 = new Date();
+            var date = "";
+            date = date1.getDate() + "." + ( date1.getMonth() + 1 ) + "." + date1.getFullYear();
+            i++;
+            var feedback1 = {
+              message: document.getElementById( 'text' ).value,
+              author: document.getElementById( 'name' ).value,
+              time: date
+            };
+            store.add( feedback1 );
+          }
+        }
+        document.getElementById( "text" ).value = '';
+        document.getElementById( "name" ).value = '';
+      } );
+  
+      function readOfflineFeedback() {
+        if ( navigator.onLine ) {
+          let xhr = new XMLHttpRequest();
+          xhr.open( 'GET', 'http://localhost:3030/feedback', false );
+          xhr.send();
+          if ( xhr.status !== 200 ) {
+            console.error( xhr.status + ': ' + xhr.statusText );
+          } else {
+            $.each( JSON.parse( xhr.responseText ), function( i, b ) {
+              var element = document.getElementById( "responses" );
+              var out = document.createElement( 'div' );
+              out.id = 'feedback';
+              out.innerHTML = '<div class = "feedback" >' + '<h2 class="Feedback_heading">' + b.author + " " + '<small>' + b.date + '</small> </h2>' + '<p>' + b.text + '</p>' + '</div></div>';
+              element.insertBefore( out, element.firstChild );
+            } );
+          }
+        } else {
+          if ( useLocalStorage ) {
+            len = localStorage.length + 1;
+            for ( var j = 1; j < len; j++ ) {
+              feedback = JSON.parse( localStorage.getItem( 'feedback' + j ) );
+              var element = document.getElementById( "responses" );
+              var out = document.createElement( "div" );
+              out.id = "feedback";
+              out.innerHTML = '<div class = "feedback" >' + '<h2 class="Feedback_heading">' + feedback[ 0 ].name + " " + '<small>' + feedback[ 0 ].date + '</small> </h2>' + '<p>' + feedback[ 0 ].text + '</p>' + '</div></div>';
+              element.insertBefore( out, element.firstChild );
+            }
+          } else {
+            var transaction = db.transaction( [ "feedback" ], "readonly" );
+            var store = transaction.objectStore( "feedback" );
+            store.openCursor().onsuccess = function( e ) {
+              var cursor = e.target.result;
+              if ( cursor ) {
+                cursor.continue();
+                var element = document.getElementById( "responses" );
+                var out = document.createElement( "div" );
+                out.id = "feedback";
+                out.innerHTML = '<div class = "feedback" >' + '<h2 class="Feedback_heading">' + cursor.value.author + " " + '<small>' + cursor.value.time + '</small> </h2>' + '<p>' + cursor.value.message + '</p>' + '</div></div>';
+                element.insertBefore( out, element.firstChild );
+              }
+            }
+          }
+        }
+      }
+    });
+  

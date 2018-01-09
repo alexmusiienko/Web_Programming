@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Bootstrap сайт</title>
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
+  <link href="static/css/bootstrap.css" rel="stylesheet">
+  <link href="static/css/main.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -59,7 +59,7 @@
                   <label>Виберіть зображення</label>
                   <input id="news-img" type="file" class="form-control-file" accept="image/*">
                 </form>
-                    <img id="target" src="images/Random-turtle.gif" class="adm_photo img-responsive st">
+                    <img id="target" src="static/images/Random-turtle.gif" class="adm_photo img-responsive st">
                </div>
 
         <div class="col-lg-6">
@@ -68,25 +68,25 @@
           </div>
                        <div class="form-group">
             <textarea class="form-control" id="newsText"rows="10" placeholder="Новина..."></textarea>
-            <button  class="admin_button btn btn-primary btn-lg" onClick = "addNews()" type="button">Haдіслати</button>
+            <button  class="admin_button btn btn-primary btn-lg" id="send_news" type="button">Haдіслати</button>
           </div>
        </div>
   </div>
 
   <footer>
     <div class="text-center">
-      <p>Made by Alex(c)</p>
+      <p>Made by me</p>
     </div>
   </footer>
 
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
       </script> 
-      <script src="js/bootstrap.min.js">
+      <script src="static/js/bootstrap.min.js">
       </script> 
 
-      <script src="Admin.js"></script>
-         <script src="indexedDB.js"></script>
+      <script src="static/js/Admin.js"></script>
+         <script src="static/js/indexedDB.js"></script>
 
  </body>
  <!-- 

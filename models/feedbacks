@@ -1,0 +1,12 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+var feedbackSchema = new Schema({
+	date: String,
+	author: String,
+	text: String
+});
+
+const feedbacks = mongoose.model('feedbacks', feedbackSchema);
+
+module.exports = feedbacks;
